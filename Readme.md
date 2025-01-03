@@ -24,10 +24,19 @@ direnv allow
 
 ## Setup infrastructure layer
 
-Plan infra
+Plan & provision infra
 
 ```bash
 cd infra/
 terraform plan
 terraform apply
+```
+
+## Execute installation on top of infra
+
+Execute ansible via
+
+```bash
+cd ansible/
+ansible-playbook -i hosts main.yml
 ```
