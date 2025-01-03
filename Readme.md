@@ -8,6 +8,10 @@ The project is seperated into two layers, that can be triggered independently:
         cloud.
 - Ansible: an ansible stack installing kubernetes on top of the hetzner servers
 
+## Prerequesites
+
+- direnv (alternatively use other way to define variables in shell env)
+
 ## Local Environment variables
 
 To load sensitive variables direnv is used. Copy `.envrc.skeleton` to `.envrc` and

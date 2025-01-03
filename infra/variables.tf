@@ -1,7 +1,7 @@
 variable "hcloud_token" {
   description = "Hetzner Cloud API Token"
   type        = string
-  sensitive = true
+  sensitive   = true
 }
 
 variable "default_network_zone" {
@@ -23,15 +23,20 @@ variable "default_server_type" {
   default     = "cx22"
 }
 
+variable "ssh_key_path" {
+  description = "Path to the SSH public key"
+  type        = string
+}
+
 variable "default_server_image" {
   description = "Default server image"
   type        = string
   default     = "debian-12"
 }
 
-variable "default_labels"{
+variable "default_labels" {
   description = "Default tags for resources"
-  type = map(string)
+  type        = map(string)
   default = {
     "env" = "dev"
   }
